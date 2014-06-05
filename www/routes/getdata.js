@@ -1,10 +1,27 @@
+/*
+ * CBB (Colorado Bright Beginnings)
+ * Copyright (C) 2013 Regents of the University of Colorado.
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ */
+
 var mysql = require('mysql');
-/*var connection = mysql.createConnection({ host: 'localhost', user: 'munjala',
-    password: 'artika12', database: 'cbbdb'});*/
 
 var openConnection = function() {
-    return mysql.createConnection({ host: 'localhost', user: 'munjala',
-        password: 'artika12', database: 'cbbdb'});
+    return mysql.createConnection({ host: 'localhost', user: '',
+        password: '', database: 'cbbdb'});
 };
 
 exports.onemessage = function(req, res){
@@ -381,7 +398,7 @@ exports.setMessageAsRead = function (req, res) {
 
 exports.sendGCM = function(req, res){
 
-    var sender = new gcm.Sender('AIzaSyDu7Q4sbbSFsDDbvJhXtNtgjbgh_W4UP04');
+    var sender = new gcm.Sender('insert the key');
     var message = new gcm.Message();
     var id = req.params.id;
 
@@ -426,8 +443,8 @@ exports.sendAPN = function(req, res){
     var options = {
         gateway: 'gateway.push.apple.com', // this URL is different for Apple's Production Servers and changes when you go to production
         errorCallback: callback,
-        cert: root + '/routes/CBBProdPushCertAartiMac.pem',
-        key:  root + '/routes/CBBProdPushKeyAartiMac.pem',
+        cert: root + 'insert path to certificate',
+        key:  root + 'insert path to certificate',
         passphrase: 'Agil33h3alth',
         port: 2195,
         enhanced: true,

@@ -22,8 +22,6 @@ app.configure('development', function(){
     app.use(express.errorHandler());
 });
 
-//app.get('/', get.all);
-//app.get('/loginSignup/:id', get.oneEmail)
 app.get('/loginSignup/:id/:pwd', get.one);
 app.get('/messages/:id', getdata.onemessage);
 app.get('/messages/spanish/:id', getdata.spanishone);

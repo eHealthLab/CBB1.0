@@ -1,6 +1,6 @@
 /*
- * Biostat Consultant - a simple CRM / billing tool for academic consultants
- * Copyright (C) 2013 Sarah Kreidler.
+ * CBB (Colorado Bright Beginnings)
+ * Copyright (C) 2013 Regents of the University of Colorado.
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
